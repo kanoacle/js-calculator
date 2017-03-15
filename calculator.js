@@ -1,8 +1,8 @@
 var calculatorModule = (function(){
-  //private
+//private
   var memory = 0;
   var total = 0;
-  //public
+//public
   return {
     load: function(n){
       total = n;
@@ -11,9 +11,11 @@ var calculatorModule = (function(){
         }
       return n;
     },
+
     getTotal: function(){
       return total;
     },
+
     add: function(n){
       total += n;
       if(typeof n !== 'number'){
@@ -21,6 +23,7 @@ var calculatorModule = (function(){
         }
       return total;
     },
+
     subtract: function(n){
       total -= n;
       if(typeof n !== 'number'){
@@ -28,6 +31,7 @@ var calculatorModule = (function(){
         }
       return total;
     },
+
     multiply: function(n){
       total *= n;
       if(typeof n !== 'number'){
@@ -35,6 +39,7 @@ var calculatorModule = (function(){
         }
       return total;
     },
+
     divide: function(n){
       total /= n;
       if(typeof n !== 'number'){
@@ -42,9 +47,11 @@ var calculatorModule = (function(){
         }
       return total;
     },
+
     recallMemory: function(){
       return memory;
     },
+
     saveMemory: function(){
       memory = total;
     },
