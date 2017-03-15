@@ -1,3 +1,14 @@
+var calculatorModule = (function(){
+  //private
+  var memory;
+  var total;
+  //public
+  return {
+    load : function(n){
+      total += n;
+    }
+  };
+});
 /**
  * Declare a function named `calculatorModule`
  * this function will have two private variables declared inside of it.
