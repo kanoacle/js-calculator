@@ -29,6 +29,9 @@ var calculatorModule = (function(){
     },
     recallMemory: function(){
       return memory;
+    },
+    saveMemory: function(){
+      memory = total;
     }
   };
 });
