@@ -6,6 +6,9 @@ var calculatorModule = (function(){
   return {
     load: function(n){
       total = n;
+      if(typeof n !== 'number'){
+          throw new Error("That ain't a number boy!");
+        }
       return n;
     },
     getTotal: function(){
@@ -13,18 +16,30 @@ var calculatorModule = (function(){
     },
     add: function(n){
       total += n;
+      if(typeof n !== 'number'){
+          throw new Error("That ain't a number boy!");
+        }
       return total;
     },
     subtract: function(n){
       total -= n;
+      if(typeof n !== 'number'){
+          throw new Error("That ain't a number boy!");
+        }
       return total;
     },
     multiply: function(n){
       total *= n;
+      if(typeof n !== 'number'){
+          throw new Error("That ain't a number boy!");
+        }
       return total;
     },
     divide: function(n){
       total /= n;
+      if(typeof n !== 'number'){
+          throw new Error("That ain't a number boy!");
+        }
       return total;
     },
     recallMemory: function(){
@@ -32,27 +47,10 @@ var calculatorModule = (function(){
     },
     saveMemory: function(){
       memory = total;
+    },
+    clearMemory: function(){
+      memory = 0;
     }
   };
 });
-
-
-  /**
-   * Return the value stored at `memory`
-   * @return { Number }
-   */
-
-
-  /**
-   * Stores the value of `total` to `memory`
-   */
-
-
-  /**
-   * Clear the value stored at `memory`
-   */
-
-  /**
-   * Validation
-   */
 
